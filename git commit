@@ -1,0 +1,21 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   .gitignore
+#	new file:   LearnApi.sln
+#	new file:   LearnApi/App_Start/WebApiConfig.cs
+#	new file:   LearnApi/Controllers/WebapiVsWcfController.cs
+#	new file:   LearnApi/Global.asax
+#	new file:   LearnApi/Global.asax.cs
+#	new file:   LearnApi/LearnApi.csproj
+#	new file:   LearnApi/Properties/AssemblyInfo.cs
+#	new file:   LearnApi/Web.Debug.config
+#	new file:   LearnApi/Web.Release.config
+#	new file:   LearnApi/packages.config
+#Changes for Nitin
