@@ -63,5 +63,54 @@ namespace LearnApi.Controllers
         //defaults              An object parameter that includes default route values
         //constraints           Regex expression to specify characteristic of route values
         //handler               The handler to which the request will be dispatched
+
+        //How Web Api handles an incoming http request and sends the response?
+        //Considering the DefaultApi route configured in the above WebApiConfig class, the above request will execute Get() action method of the ValuesController
+        //because HTTP method is a Get and URL is http://localhost:1234/api/values which matches with DefaultApi's route template /api/{controller}/{id}
+        //where value of {controller} will be ValuesController. Default route has specified id as an optional parameter so if an id is not present in the url
+        //then {id} will be ignored. The request's HTTP method is GET so it will execute Get() action method of ValueController.
+
+        //If Web Api framework does not find matched routes for an incoming request then it will send 404 error response.
+
+        //Configure multiple routes
+        public static class WebApiConfigWithMultipleRoutes
+        {
+            public static void Register(HttpConfiguration config)
+            {
+                config.MapHttpAttributeRoutes();
+
+                //School route
+                config.Routes.MapHttpRoute(
+                    name: "School",
+                    routeTemplate: "api/myschool/{id}",
+                    defaults: new { controller = "school", id = RouteParameter.Optional }
+                    );
+
+                //Default route
+                config.Routes.MapHttpRoute(
+                    name: "DefaultApi",
+                    routeTemplate: "api/{controller}/{id}",
+                    defaults: new { id = RouteParameter.Optional }
+                    );
+
+                //In the above example, School route is configured before DefaultApi route. So any incoming request will be matched with the School route first and
+                //if incoming request url does not match with it then only it will be matched with DefaultApi route. For example, request url is
+                //http://localhost:1234/api/mySchool
+            }
+        }
+
+        //Attribute routing
+        //Attribute routing is supported in Web Api 2. As the name implies, attribute routing uses [Route()] attribute to define routes. The Route attribute can be
+        //applied on any controller or action method.
+        //In order to use attribute routing with Web API, it must be enabled in WebApiConfig by calling config.MapHttpAttributeRoutes() method.
+
+        [Route("api/student/names")]
+        public IEnumerable<string> Get()
+        {
+            return new string[] { "Student1", "Student2" };
+        }
+
+        //In the above example, the Route attribute defines new route "api/student/names" which will be handled by the Get() action method of StudentController.
+        //Thus, an HTTP GET request http://localhost:1234/api/student/names will return list of student names.
     }
 }
