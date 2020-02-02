@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ActionMethodReturnTypeController.cs" />
     <Compile Include="Controllers\ConfigureWebApiController.cs" />
     <Compile Include="Controllers\ParameterBindingController.cs" />
     <Compile Include="Controllers\UsingHttpVerbsController.cs" />
