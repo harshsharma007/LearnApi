@@ -118,13 +118,21 @@ namespace LearnApi.Controllers
             StatusCode()                    Creates a StatusCodeResult with the specified http status code.
             Unauthorized()                  Creates an UnauthorizedResult with status code 401.
         */
+
+        public IHttpActionResult GetNames(int Id)
+        {
+            if (Id < 1)
+                return NotFound();
+
+            return new TextResult("", Request);
+        }
     }
 
     /*
         Create Custom Result Type
         You can create your own custom class as a result type that implements IHttpActionResult interface.
     */
-    public class TextResult : ApiController, IHttpActionResult
+    public class TextResult : IHttpActionResult
     {
         string _value;
         HttpRequestMessage _request;
@@ -143,14 +151,6 @@ namespace LearnApi.Controllers
                 RequestMessage = _request
             };
             return Task.FromResult(response);
-        }
-
-        public IHttpActionResult GetNames(int Id)
-        {
-            if (Id < 1)
-                return NotFound();
-
-            return new TextResult("", Request);
         }
     }
 }
