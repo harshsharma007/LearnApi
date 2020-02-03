@@ -49,7 +49,7 @@ namespace LearnApi.Controllers
             // save student into db
             //var insertedStudent = SaveStudent(student);
             //return insertedStudent;
-            
+
             return null;
         }
 
@@ -57,6 +57,35 @@ namespace LearnApi.Controllers
             As you can see above, the Post() action method accepts Student type parameter, saves that student into DB and returns inserted student with generated Id.
             The above Web API handles HTTP POST request with JSON or XML data and parses it to a Student object based on Content-Type header value and the same way
             it converts insertedStudent object into JSON or XML based on Accept header value.
+        */
+
+        /*
+            Accept-header and Content-type are both headers sent from a client (browser say) to a service. Accept header is a way for a client to specify the media
+            type of the response content it is expecting and Content-Type is a way to specify the media type of request being sent from the client to the server.
+        */
+
+        /*
+            POST -> http://localhost:1000/api/student
+
+            User-Agent: Fiddler
+            Host: localhost:1000
+            Content-Length: 41
+            accept: text/xml
+            content-type: application/json
+
+            In the above figure, Accept header specifies that it expects response data in XML format and Content-Type specifies that the student data into request body
+            is in the JSON format.
+
+            The same way, you can specify different request & response format using accept and Content-Type headers and Web API will handle them without any additional
+            changes. The following HTTP POST request sends data in XML format and receives data in JSON format.
+
+            User-Agent: Fiddler
+            Host: localhost:1000
+            Content-Length: 41
+            accept: application/json
+            content-type: text/xml
+
+            Thus, Web API handles JSON and XML data by default.
         */
     }
 }
