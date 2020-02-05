@@ -85,11 +85,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Common\LogAttribute.cs" />
     <Compile Include="Controllers\ActionMethodReturnTypeController.cs" />
     <Compile Include="Controllers\ConfigureWebApiController.cs" />
     <Compile Include="Controllers\DataFormatsController.cs" />
+    <Compile Include="Controllers\MediaTypeFormattersController.cs" />
     <Compile Include="Controllers\ParameterBindingController.cs" />
     <Compile Include="Controllers\UsingHttpVerbsController.cs" />
+    <Compile Include="Controllers\WebApiFiltersController.cs" />
     <Compile Include="Controllers\WebApiRoutingController.cs" />
     <Compile Include="Controllers\WebapiVsWcfController.cs" />
     <Compile Include="Global.asax.cs">
