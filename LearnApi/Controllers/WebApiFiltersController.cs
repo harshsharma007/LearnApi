@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearnApi.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -32,7 +33,21 @@ namespace LearnApi.Controllers
 
         Classes and Interfaces are available in System.Web.Http.Filters.
     */
+
+    [Log]
     public class WebApiFiltersController : ApiController
     {
+        public WebApiFiltersController()
+        {
+
+        }
+
+        public void Get()
+        {
+
+        }
     }
+    /*
+        After implementing filter, all the requests will be logged by WebApiFilterController. Thus, you can create filters for cross-cutting concerns.
+    */
 }

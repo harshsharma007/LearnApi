@@ -59,4 +59,8 @@ namespace LearnApi.Common
             }
         }
     }
+    /*
+        In the above example, deriving from Attribute class makes it an attribute and implementing IActionFilter makes LogAttribute class as action filter. So now,
+        you can apply [Log] attributes on controllers or action methods.
+    */
 }
