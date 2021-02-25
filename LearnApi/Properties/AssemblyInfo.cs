@@ -10,11 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("LearnApi")]
-<<<<<<< HEAD
-[assembly: AssemblyCopyright("Copyright ©  2019")]
-=======
 [assembly: AssemblyCopyright("Copyright ©  2021")]
->>>>>>> 5f425d3 (Learn Api)
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -24,11 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-<<<<<<< HEAD
-[assembly: Guid("5f604b49-15f4-430a-b2ef-e70507c157ee")]
-=======
 [assembly: Guid("d733e667-53fb-498b-985d-d3a7e0098f0e")]
->>>>>>> 5f425d3 (Learn Api)
 
 // Version information for an assembly consists of the following four values:
 //
