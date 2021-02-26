@@ -1,5 +1,5 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -140,6 +140,8 @@
     <Compile Include="Controllers\ConfigureWebApiController.cs" />
     <Compile Include="Controllers\DataFormatsController.cs" />
     <Compile Include="Controllers\ExceptionHandling\ExceptionFiltersController.cs" />
+    <Compile Include="Controllers\ExceptionHandling\ExceptionHandlersController.cs" />
+    <Compile Include="Controllers\ExceptionHandling\ExceptionLoggerController.cs" />
     <Compile Include="Controllers\ExceptionHandling\HttpResponseExceptionController.cs" />
     <Compile Include="Controllers\MediaTypeFormattersController.cs" />
     <Compile Include="Controllers\ParameterBindingController.cs" />
