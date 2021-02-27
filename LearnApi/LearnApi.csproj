@@ -149,6 +149,7 @@
     <Compile Include="Controllers\WebApiFiltersController.cs" />
     <Compile Include="Controllers\WebApiRoutingController.cs" />
     <Compile Include="Controllers\WebapiVsWcfController.cs" />
+    <Compile Include="Difference\WebApiAndWebApi2.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -166,7 +167,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\CRUD\" />
-    <Folder Include="Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
