@@ -155,6 +155,7 @@
     </Compile>
     <Compile Include="InterviewQuestions\GenericInterviewQuestions.cs" />
     <Compile Include="InterviewQuestions\HtmlResponseMessageController.cs" />
+    <Compile Include="InterviewQuestions\TestIfClassHasAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
