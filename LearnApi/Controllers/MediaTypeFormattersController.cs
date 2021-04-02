@@ -104,26 +104,24 @@ namespace LearnApi.Controllers
         JSON formatter can be configured in WebApiConfig class. The JsonMediaTypeFormatter class includes various properties and methods using which you can
         customize JSON serialization. For example, Web API writes JSON property names with PascalCase by default. To write JSON property names with cameCase,
         set the CamelCasePropertyNamesContractResolver on the serializer settings as shown below:
-    */
 
-    public static class WebApiConfig
-    {
-        public static void Register(HttpConfiguration config)
+        public static class WebApiConfig
         {
-            config.MapHttpAttributeRoutes();
+            public static void Register(HttpConfiguration config)
+            {
+                config.MapHttpAttributeRoutes();
 
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-                );
+                config.Routes.MapHttpRoute(
+                    name: "DefaultApi",
+                    routeTemplate: "api/{controller}/{id}",
+                    defaults: new { id = RouteParameter.Optional }
+                    );
 
-            JsonMediaTypeFormatter jsonFormatter = config.Formatters.JsonFormatter;
-            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+                JsonMediaTypeFormatter jsonFormatter = config.Formatters.JsonFormatter;
+                jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            }
         }
-    }
 
-    /*
         XML Formatter
         The XmlMediaTypeFormatter class is responsible for serializing model objects into XML data. It uses System.Runtime.DataContractSerializer class to generate
         XML data.

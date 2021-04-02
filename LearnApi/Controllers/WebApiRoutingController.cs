@@ -43,23 +43,21 @@ namespace LearnApi.Controllers
             collection of type HttpRouteCollection. The "DefaultApi" route is added in the route table using MapHttpRoute() extension method. The MapHttpRoute()
             extension method internally creates a new instance of IHttpRoute and adds it to an HttpRouteCollection. However, you can create a new route and add
             it into a collection manually as shown below.
-        */
 
-        public static class WebApiConfig
-        {
-            public static void Register(HttpConfiguration config)
+            public static class WebApiConfig
             {
-                config.MapHttpAttributeRoutes();
+                public static void Register(HttpConfiguration config)
+                {
+                    config.MapHttpAttributeRoutes();
 
-                //Define route
-                IHttpRoute defaultRoute = config.Routes.CreateRoute("api/{controller}/{id}", new { id = RouteParameter.Optional }, null);
+                    //Define route
+                    IHttpRoute defaultRoute = config.Routes.CreateRoute("api/{controller}/{id}", new { id = RouteParameter.Optional }, null);
 
-                //Add route
-                config.Routes.Add("DefaultApi", defaultRoute);
+                    //Add route
+                    config.Routes.Add("DefaultApi", defaultRoute);
+                }
             }
-        }
 
-        /*
             The following table lists parameters of MapHttpRoute method.
             Parameter             Description
             name                  Name of the route
