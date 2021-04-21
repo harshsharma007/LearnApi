@@ -64,6 +64,7 @@
     <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
     </Reference>
@@ -150,6 +151,7 @@
     <Compile Include="Controllers\ExceptionHandling\ExceptionHandlersController.cs" />
     <Compile Include="Controllers\ExceptionHandling\ExceptionLoggerController.cs" />
     <Compile Include="Controllers\ExceptionHandling\HttpResponseExceptionController.cs" />
+    <Compile Include="Controllers\HackerRank\HackerRankCallController.cs" />
     <Compile Include="Controllers\MediaTypeFormattersController.cs" />
     <Compile Include="Controllers\ParameterBindingController.cs" />
     <Compile Include="Controllers\UsingHttpVerbsController.cs" />
@@ -164,6 +166,8 @@
     <Compile Include="InterviewQuestions\HtmlResponseMessageController.cs" />
     <Compile Include="InterviewQuestions\TestIfClassHasAttribute.cs" />
     <Compile Include="InterviewQuestions\WhyToUsePutInsteadOfPostController.cs" />
+    <Compile Include="Models\HackerRankData.cs" />
+    <Compile Include="Models\HackerRankModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Understanding\CORSController.cs" />
     <Compile Include="Understanding\HttpRequestMethodsController.cs" />
@@ -181,7 +185,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
